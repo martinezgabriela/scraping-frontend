@@ -1,0 +1,11 @@
+<div class="container space-t">
+    <div class="row" *ngFor="let element of newsListArray">
+        <div class="row">
+            <div class="fw-bold space-b"> {{element.titulo}} </div>
+        </div>
+        <div class="row space-b"> {{element.subtitulo}} </div>
+        <div class="row space-b"> {{element.autor}} </div>
+        <div class="row space-b"> {{element.dataPublicacao}} </div>
+        <div class="row space-b"> {{element.conteudo}} </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <nav class="class=navbar navbar-dark bg-dark">
+        <div class="navbar-brand">INFOSCRAPING</div>
+    </nav>
+    <form [formGroup]="formulario">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" formControlName="url"
+                placeholder="Digite a url da notícia que deseja cadastrar" aria-label="URL"
+                aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)=create()>Cadastrar</button>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" formControlName="searchWord"
+                placeholder="Digite a palavra-chave da notícia que deseja procurar" aria-label="Palavra procurada"
+                aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)=findByWord()>Procurar</button>
+            </div>
+        </div>
+
+    </form>
+    <div>
+        <button class="btn btn-outline-secondary" type="button" (click)=findAll()>Listar todas</button>
+    </div>
+    
+</div>
