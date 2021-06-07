@@ -48,7 +48,9 @@ export class HomeComponent implements OnInit {
           this.noticiasService.showMessage('Nenhuma notícia encontrada.')
         }
       });
-    } this.noticiasService.showMessage('Digite uma palavra-chave.')
+    } else {
+      this.noticiasService.showMessage('Digite uma palavra-chave.')
+    }
 
   }
 
