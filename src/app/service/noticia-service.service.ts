@@ -55,8 +55,8 @@ export class NoticiaService {
     );
   }
 
-  errorHandler(e: any): Observable<any> {
-    this.showMessage('Ocorreu um erro!', true);
+  errorHandler(e: any): Observable<any> {    
+    this.showMessage(e.error.message , true);
     return EMPTY;
   }
 

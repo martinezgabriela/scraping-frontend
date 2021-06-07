@@ -37,15 +37,18 @@ export class HomeComponent implements OnInit {
   }
 
   findByWord() {
-    this.noticiasService.findByWord(this.formulario.controls.searchWord.value).subscribe(data => {
-      if (data && data.noticias.length > 0) {
-        this.newsList = data;
-        this.setNewsList(this.newsList);
-        this.router.navigate(['/list']);
-      } else {
-        this.noticiasService.showMessage('Nenhuma notícia encontrada.')
-      }
-    });
+    let searchWord = this.formulario.controls.searchWord.value;
+    if (searchWord) {
+      this.noticiasService.findByWord(searchWord).subscribe(data => {
+        if (data && data.noticias.length) {
+          this.newsList = data;
+          this.setNewsList(this.newsList);
+          this.router.navigate(['/list']);
+        } else {
+          this.noticiasService.showMessage('Nenhuma notícia encontrada.')
+        }
+      });
+    } this.noticiasService.showMessage('Digite uma palavra-chave.')
 
   }
 
