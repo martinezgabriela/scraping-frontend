@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Notification } from 'rxjs';
 import { Noticia, NoticiaResponse } from '../models/response/noticia-response';
 import { NoticiaService } from '../service/noticia-service.service';
@@ -14,12 +15,17 @@ export class ListNoticiasComponent implements OnInit {
   newsListArray: Array<Noticia>
 
   constructor(
-    private noticiaService: NoticiaService
+    private noticiaService: NoticiaService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
      this.noticiaService.getNewsList().subscribe(data => this.newsList = data);
      this.newsListArray = this.newsList.noticias;
+  }
+
+  return(){
+    this.router.navigate(['']);
   }
 
 }

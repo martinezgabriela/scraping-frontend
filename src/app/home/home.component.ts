@@ -38,7 +38,7 @@ export class HomeComponent implements OnInit {
 
   findByWord() {
     this.noticiasService.findByWord(this.formulario.controls.searchWord.value).subscribe(data => {
-      if (data && data.noticias.length) {
+      if (data && data.noticias.length > 0) {
         this.newsList = data;
         this.setNewsList(this.newsList);
         this.router.navigate(['/list']);

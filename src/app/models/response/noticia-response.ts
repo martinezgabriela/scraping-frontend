@@ -6,7 +6,7 @@ export class Noticia{
     titulo?: string;
     subtitulo?: string;
     autor?: string;
-    dataPublicacao?: string;
+    data?: string;
     conteudo?: string;
 }
 
