@@ -1,4 +1,4 @@
-Aplicação frontend para integração com API springboot de scraping de dados do site infomoney.
+Aplicação frontend para integração com API backend de scraping de dados do site infomoney.
 Angular + bootstrap
 
 # InfoScraping
