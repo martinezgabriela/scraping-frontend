@@ -59,18 +59,7 @@ describe('HomeComponent', () => {
     spyOn(component['noticiasService'], 'showMessage');
     component.findByWord();
     expect(component['noticiasService'].showMessage).toHaveBeenCalled();
-  });
-
-  it('should teste findByWord and expect to navigate ', () => {
-    let mockResponse = new NoticiaResponse();
-    mockResponse.noticias = [new Noticia()]; 
-    spyOn(component['noticiasService'], 'findByWord')
-    .and.returnValue(of(mockResponse));
-    spyOn(component['router'], 'navigate');
-    component.findByWord();
-    expect(component['newsList']).toBeTruthy();
-    expect(component['router'].navigate).toHaveBeenCalledWith(['/list']);
-  });
+  });  
 
   it('should teste findAll and expect to open message ', () => {
     let mockResponse = new NoticiaResponse();
